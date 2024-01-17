@@ -1,8 +1,11 @@
 package StepDef;
 
+import org.testng.Assert;
+
 import BaseLayer.BaseClass;
 import PageLayer.LoginClass;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps extends BaseClass{
@@ -22,6 +25,12 @@ public class LoginSteps extends BaseClass{
 	@When("user click on login button")
 	public void user_click_on_login_button() {
 	   lc.click();
+	}
+	
+	@Then("user verify homepageTitle")
+	public void user_verify_homepage_title() {
+	   String title = driver.getTitle();
+	   Assert.assertEquals(title,"Swag Labs");
 	}
 
 }
