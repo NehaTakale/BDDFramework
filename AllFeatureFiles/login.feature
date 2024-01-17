@@ -5,3 +5,4 @@ Feature: Test the SauceDemo Appl
     When User enters username "standard_user" and password "secret_sauce"
     And user click on login button
     Then user verify homepageTitle
+    Then user verify homepage Url

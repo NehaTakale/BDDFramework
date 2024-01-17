@@ -32,5 +32,12 @@ public class LoginSteps extends BaseClass{
 	   String title = driver.getTitle();
 	   Assert.assertEquals(title,"Swag Labs");
 	}
+	@Then("user verify homepage Url")
+	public void user_verify_homepage_url() {
+	  String Url = driver.getCurrentUrl();
+	  boolean g = Url.contains("sau");
+	  Assert.assertEquals(g, true);
+	  
+	}
 
 }
